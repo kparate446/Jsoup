@@ -24,6 +24,7 @@ public class JSoupSetAttribute {
 		Element link = document.getElementById("sampleDiv");
 		System.out.println("Outer HTML Before Modification: "+link.outerHtml());
 		link.attr("href","www.yahoo.com"); // Added the Link
-		System.out.println("Outer HTML After Modification: "+link.outerHtml());	
+		System.out.println("Outer HTML After Modification: "+link.outerHtml());
+		
 	}
 }

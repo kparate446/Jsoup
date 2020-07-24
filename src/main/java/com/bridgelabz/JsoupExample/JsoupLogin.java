@@ -13,6 +13,7 @@ public class JsoupLogin {
     public static void main(String[] args) {
         
         try {
+            
             //grab login form page first
             Response loginPageResponse = 
                     Jsoup.connect("https://mail.rediff.com/cgi-bin/login.cgi")
@@ -71,6 +72,7 @@ public class JsoupLogin {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }        
+        }
+        
     }
 }

@@ -6,10 +6,15 @@ import org.jsoup.safety.Whitelist;
 public class NewLine {
 	public static void main(String[] args) {
 
-		String strHTML = "<html><body>Hello\nworld</body></html>";			
+		String strHTML = "<html><body>Hello\nworld</body></html>";	
+//		String str = Jsoup.parse(strHTML).text();
+//		System.out.println(str);
+		
 		OutputSettings settings = new OutputSettings();
 		settings.prettyPrint(false);
 		String str = Jsoup.clean(strHTML, "", Whitelist.none(), settings);
 		System.out.println(str);
 	}
 }
+//Hello
+//world

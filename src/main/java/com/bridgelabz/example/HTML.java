@@ -6,15 +6,15 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+
 public class HTML {
     public static void main(String[] args) throws IOException {
         String url = "http://www.htmlcodetutorial.com/tables/_THEAD.html";
         String fileName = "table.csv";
         FileWriter writer = new FileWriter(fileName);
         Document doc = Jsoup.connect(url).get();
-        System.out.println(doc);
+        
         Element tableElement = doc.select("table").first();
-
         Elements tableHeaderEles = tableElement.select("thead tr th");
         System.out.println("headers");
         for (int i = 0; i < tableHeaderEles.size(); i++) {

@@ -35,16 +35,10 @@ public class JSoup {
 		 System.out.println(doc);
 
 		/** Use DOM methods to navigate a document */
-		 // File input = new File("/tmp/input.html");
-		 // Document doc = Jsoup.parse(input, "UTF-8", "http://example.com/");
 		 Document doc = Jsoup.connect("http://example.com/").get();
-		 // System.out.println(doc);
-		 // Element content = doc.getElementByTag("content");
 		 Elements links = doc.getElementsByTag("a");
 		 for (Element link : links) {
-		 // String linkHref = link.attr("href");
 		 System.out.println(link.attr("href"));
-		 // String linkText = link.text();
 		 System.out.println(link.text());
 		 }
 

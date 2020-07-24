@@ -27,6 +27,7 @@ public class JsoupIterateAllElements {
 //        Elements elements = document.select("*");
 //        Elements elements = document.body().select("*");
         Elements elements = document.body().children();
+
         //iterate elements using enhanced for loop
         for(Element e : elements)
             System.out.println( e.tagName() + ": " + e.text());
