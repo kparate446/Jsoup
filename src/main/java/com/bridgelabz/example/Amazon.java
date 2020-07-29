@@ -8,9 +8,7 @@ import org.jsoup.select.Elements;
 public class Amazon {
 	public static void main(String[] args) throws Exception {
 		final Document document = Jsoup.connect("https://www.amazon.in/").timeout(6000).get();
-		// System.out.println(document.outerHtml());
 		Elements body = document.select("div.a-section");
-		// System.out.println(body.text());
 		for (Element step : body) {
 			String title = step.select(" div.a-cardui-body div a ").text();
 			System.out.println(title);

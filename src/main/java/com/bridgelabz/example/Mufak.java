@@ -17,7 +17,6 @@ public class Mufak {
 			for (Element trElement : table.getElementsByTag("tr")) {
 				// skip header "tr"s and process only data "tr"s
 				if (trElement.hasClass("tab-data1")) {
-					//StringJoiner is a characters separated by a delimiter and optionally starting with a supplied prefix and ending with a supplied suffix.
 					StringJoiner tdj = new StringJoiner(",");
 					for (Element tdElement : trElement.getElementsByTag("td")) {
 						tdj.add(tdElement.text());

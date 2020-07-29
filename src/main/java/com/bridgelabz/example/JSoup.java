@@ -26,8 +26,6 @@ public class JSoup {
 		/** Load a document from a Url */
 		 Document doc = Jsoup.connect("http://example.com/").get();
 		 System.out.println(doc);
-		 String title = doc.title();
-		 System.out.println(title);
 
 		/** Load a document from a File */
 		 File input = new File("C:\\Users\\HP\\Desktop\\ShoppingApp\\a.html");
