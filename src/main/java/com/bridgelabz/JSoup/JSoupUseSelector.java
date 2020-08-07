@@ -25,14 +25,12 @@ public class JSoupUseSelector {
 			System.out.println("Href: "+link.attr("href"));
 			System.out.println("Text: "+link.text());
 		}
-
 		// img with src ending .png
 		Elements pngs = document.select("img[src$=.png]");
 
 		for(Element png : pngs) {
 			System.out.println("Name: "+png.attr("name"));
 		}
-
 		//div with class=header
 		Element headerDiv = document.select("div.header").first();
 		System.out.println("Id: "+headerDiv.id());

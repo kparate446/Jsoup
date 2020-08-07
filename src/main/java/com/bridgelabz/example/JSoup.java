@@ -50,6 +50,7 @@ public class JSoup {
 
 		/** Working with URLs */
 		Document doc = Jsoup.connect("http://example.com/").get();
+		// System.out.println(doc.select("a").first());
 		System.out.println(doc.select("a").first().attr("href"));
 		System.out.println(doc.select("a").first().attr("abs:href"));
 	}

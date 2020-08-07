@@ -13,6 +13,7 @@ public class Revenge {
 	private static final String Website = "https://www.revengeofficial.com/";
 	private static Map<String , String > items;
 
+
 	public static void main(String[] args) throws IOException {
 		items = new HashMap<>();
 		getLink();
@@ -21,6 +22,7 @@ public class Revenge {
 		Document document = Jsoup.connect(Website).get();
 
 		Elements elements = document.getElementsByClass("grid-view-item__link grid-view-item__image-container full-width-link");
+
 		for(Element element : elements) {
 			String link = element.attributes().get("href");
 			findPrice(link);
@@ -41,6 +43,7 @@ public class Revenge {
 			String links = entry.getKey();
 			String price = entry.getValue();
 			System.out.println("Link "+links);
+			System.out.println("Price "+price);
 		}
 	}
 }
