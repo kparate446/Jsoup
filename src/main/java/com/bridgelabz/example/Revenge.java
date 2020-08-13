@@ -35,7 +35,6 @@ public class Revenge {
 		Elements elements = document.getElementsByClass("price__regular");
 		for(Element element : elements) {
 			items.put(link, element.text());
-
 		}
 	}
 	private static void printItems() {

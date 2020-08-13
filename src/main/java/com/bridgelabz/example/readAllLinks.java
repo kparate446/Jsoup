@@ -7,13 +7,13 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-public class readAllLinks {
+public class ReadAllLinks {
 	//Adding all the set of url
 	public static Set<String> uniqueURL = new HashSet<String>();
 	public static String site;
 
 	public static void main(String[] args) throws IOException {
-		readAllLinks obj = new readAllLinks();
+		ReadAllLinks obj = new ReadAllLinks();
 		site = "stackoverflow.com";
 		obj.getLinks("http://stackoverflow.com/");
 	}
@@ -28,6 +28,7 @@ public class readAllLinks {
 		links.stream().map((link) -> link.attr("abs:href")).forEachOrdered((this_url) -> {
 			boolean add = uniqueURL.add(this_url);
 			if (add && this_url.contains(site)) {
+				
 				System.out.println(this_url);
 				try {
 					getLinks(this_url);
